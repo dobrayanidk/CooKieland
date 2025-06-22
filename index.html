@@ -278,43 +278,48 @@
 /* Botón flotante de WhatsApp */
 .whatsapp-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  width: 60px;
-  height: 60px;
-  background-color: #25d366;
-  border-radius: 50%;
+  bottom: 25px;
+  right: 25px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
+  padding: 10px 12px; /* Menos padding horizontal */
+  gap: 8px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  z-index: 1000;
+  max-width: 180px;  /* Limita ancho máximo */
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.whatsapp-button:hover {
-  transform: scale(1.1);
+.whatsapp-text {
+  color: #25D366;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  user-select: none;
+  text-overflow: ellipsis;  /* Si el texto es muy largo, se corta con puntos suspensivos */
+  max-width: 120px;  /* Máximo ancho para el texto */
 }
 
-.whatsapp-button img {
-  width: 30px;
-  height: 30px;
-}
-
-/* Ajustes para móviles */
+/* Igual que antes para móvil */
 @media (max-width: 480px) {
   .whatsapp-button {
-    width: 50px;
-    height: 50px;
-    bottom: 15px;
-    right: 15px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
   }
-
-  .whatsapp-button img {
-    width: 24px;
-    height: 24px;
+  .whatsapp-text {
+    display: none;
   }
 }
+
 
 
   </style>
@@ -322,13 +327,72 @@
 <body>
 
 <!-- Botón flotante de WhatsApp -->
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/525512345678?text=Hola,%20quiero%20más%20información" 
-   class="whatsapp-button" 
-   target="_blank" 
-   aria-label="Chatea por WhatsApp">
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+<!-- Botón WhatsApp -->
+<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" />
+  <span class="whatsapp-text">Contáctanos</span>
 </a>
+
+<style>
+  .whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    z-index: 1000;
+    max-width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .whatsapp-button:hover {
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+    transform: scale(1.05);
+  }
+
+  .whatsapp-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .whatsapp-text {
+    color: #25D366;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    user-select: none;
+    text-overflow: ellipsis;
+    max-width: 110px;
+  }
+
+  @media (max-width: 480px) {
+    .whatsapp-button {
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border-radius: 50%;
+      justify-content: center;
+    }
+    .whatsapp-text {
+      display: none;
+    }
+    .whatsapp-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+</style>
+
+
 
 <div class="container">
 
@@ -341,7 +405,7 @@
   box-shadow: 0 10px 20px rgba(223, 207, 207, 0.3);
   text-align: center;
 ">
-<img src="logo.jpg" alt="" style="height: 350px; width: 500px;">
+<img src="logo.jpg" alt="" style="height: 250px; width: 500px;">
   <h1 style="
     font-size: 3.4rem;
     color: #B85B7B;
@@ -484,7 +548,7 @@
     </a>
 
     <!-- Facebook -->
-    <a href="https://www.facebook.com/CookieLanCaLi" target="_blank" style="text-decoration: none; text-align: center; background: #3b5998; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+    <a href="https://www.facebook.com/share/1ANNiKmfbf/?mibextid=wwXIfr" target="_blank" style="text-decoration: none; text-align: center; background: #3b5998; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
       <div style="font-size: 2rem;">📘</div>
       <div style="margin-top: 10px; font-weight: bold;">CookieLanCaLi</div>
       <div style="font-size: 0.9rem;">Facebook</div>
@@ -508,7 +572,7 @@
 
   <div style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: #8A6D6D;">
     También puedes escanear el código QR que aparece en nuestra tarjeta para seguirnos 💖
-    <img src="imagen1.jpg" alt="" style="height: 250px;">
+    <img src="imagen1.jpg" alt="" style="height: 850px; width: 600px;">
 
   </div>
 </section>  
