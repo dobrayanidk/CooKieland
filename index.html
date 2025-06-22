@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookieland Cali - Galletas Decoradas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/purty-wood.png'), #FFF8F0;
+      color: #4B4B4B;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      font-family: 'Dancing Script', cursive;
+      color: #B88C8C;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    header {
+      background: #F7EDE2;
+      text-align: center;
+      padding: 60px 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(223, 207, 207, 0.4);
+      margin-bottom: 40px;
+    }
+
+    header button {
+      margin-top: 30px;
+      background: #CFA4B3;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px #d9aab3cc;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    header button:hover {
+      background: #b67d8a;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      flex: 1;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      height: 160px;
+      object-fit: cover;
+      box-shadow: 0 8px 15px rgba(223, 207, 207, 0.5);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      background: #F7E8E6;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(223, 207, 207, 0.4);
+      margin-bottom: 50px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(223, 207, 207, 0.4);
+    }
+
+    .testimonios .card {
+      background: #fff0f2;
+      border-left: 5px solid #CFA4B3;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(223, 207, 207, 0.3);
+      max-width: 600px;
+    }
+
+    .testimonios .card span {
+      font-weight: bold;
+      color: #B88C8C;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 8px #00000030;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #F0D9DA;
+      text-align: center;
+      font-size: 1rem;
+      color: #7B6F6F;
+      padding: 20px 10px;
+      border-top: 2px solid #CFA4B3;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5215610995979" class="whatsapp-btn" title="Chatea con nosotros por WhatsApp">💬</a>
+
+<div class="container">
+
+  <!-- Encabezado -->
+ <header class="fade-in" style="
+  background: url('https://www.transparenttextures.com/patterns/confetti.png'), linear-gradient(to right, #FDE3E3, #F7E6DA);
+  background-size: contain;
+  padding: 80px 20px 60px;
+  border-radius: 25px;
+  box-shadow: 0 10px 20px rgba(223, 207, 207, 0.3);
+  text-align: center;
+">
+<img src="logo.jpg" alt="" style="height: 350px; width: 500px;">
+  <h1 style="
+    font-size: 3.4rem;
+    color: #B85B7B;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #f8d1dc;
+  ">Cookieland Cali</h1>
+
+  <p style="
+    font-size: 1.3rem;
+    color: #7A5F5F;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  ">
+    🍭 Galletas decoradas a mano con amor y sabor para cada ocasión especial 🍓
+  </p>
+
+  <a href="#catalogo" style="
+  display: inline-block;
+  background: #CFA4B3;
+  color: white;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px #d9aab3aa;
+  transition: all 0.3s ease;
+  animation: floatButton 3s ease-in-out infinite;
+">🍪 Explora nuestro catálogo</a>
+
+<style>
+@keyframes floatButton {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+</style>
+</header>
+
+<section id="catalogo" class="fade-in" aria-label="Catálogo de Galletas">  <h2 style="text-align:center; margin-bottom: 30px;">Nuestro Catálogo</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
+    
+    <!-- Tarjeta de producto -->
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="1.jpg" alt="Galleta 1" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 1</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="2.jpg" alt="Galleta 2" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 2</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="3.jpg" alt="Galleta 3" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 3</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="4.jpg" alt="Galleta 4" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 4</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="5.jpg" alt="Galleta 5" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 5</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="6.jpg" alt="Galleta 6" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 6</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="7.jpg" alt="Galleta 7" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 7</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="8.jpg" alt="Galleta 8" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 8</strong></div>
+    </div>
+
+    <div style="background: #fff0f2; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;">
+      <img src="9.jpg" alt="Galleta 9" style="width: 100%; height: 170px; object-fit: cover;">
+      <div style="padding: 15px;"><strong>Galleta 9</strong></div>
+    </div>
+
+   
+
+  </div>
+</section>
+
+  <!-- Información + mapa + botón Google Maps -->
+  <section class="fade-in" aria-label="Información sobre Cookieland Cali">
+    <h2>Acerca de Nosotros</h2>
+    <p>En Cookieland Cali nos especializamos en crear galletas decoradas únicas para cada ocasión. Usamos ingredientes frescos y técnicas artesanales para que cada bocado sea un deleite.</p>
+    <p>¿Quieres sorprender con un regalo dulce? Contáctanos y haremos realidad tu idea en galletas personalizadas.</p>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1509.258889812158!2d-98.986083!3d19.36675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1718999999999"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación exacta en Los Reyes Acaquilpan">
+      </iframe>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="https://www.google.com/maps?q=19.36675,-98.986083" target="_blank" style="
+        display: inline-block;
+        background: #CFA4B3;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 8px #d9aab3cc;
+        transition: background 0.3s ease;
+      ">📍 Ver ubicación en Google Maps</a>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  
+
+  <section class="fade-in" aria-label="Redes sociales y contacto" style="background: #FDF2F4; padding: 50px 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(223, 207, 207, 0.3); margin-bottom: 60px;">
+  <h2 style="text-align:center; color: #B88C8C; margin-bottom: 30px;">Contáctanos</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/cookiecali90" target="_blank" style="text-decoration: none; text-align: center; background: #C13584; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+      <div style="font-size: 2rem;">📸</div>
+      <div style="margin-top: 10px; font-weight: bold;">@cookiecali90</div>
+      <div style="font-size: 0.9rem;">Instagram</div>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/CookieLanCaLi" target="_blank" style="text-decoration: none; text-align: center; background: #3b5998; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+      <div style="font-size: 2rem;">📘</div>
+      <div style="margin-top: 10px; font-weight: bold;">CookieLanCaLi</div>
+      <div style="font-size: 0.9rem;">Facebook</div>
+    </a>
+
+    <!-- WhatsApp 1 -->
+    <a href="https://wa.me/5215610995979" target="_blank" style="text-decoration: none; text-align: center; background: #25D366; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+      <div style="font-size: 2rem;">💬</div>
+      <div style="margin-top: 10px; font-weight: bold;">56 1099 5979</div>
+      <div style="font-size: 0.9rem;">WhatsApp</div>
+    </a>
+
+    <!-- WhatsApp 2 -->
+    <a href="https://wa.me/5215529400007" target="_blank" style="text-decoration: none; text-align: center; background: #25D366; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+      <div style="font-size: 2rem;">💬</div>
+      <div style="margin-top: 10px; font-weight: bold;">55 2940 0007</div>
+      <div style="font-size: 0.9rem;">WhatsApp</div>
+    </a>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: #8A6D6D;">
+    También puedes escanear el código QR que aparece en nuestra tarjeta para seguirnos 💖
+    <img src="imagen1.jpg" alt="" style="height: 250px;">
+
+  </div>
+</section>  
+  </div> <!-- Cierre de .container -->
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Cookieland Cali. Todos los derechos reservados.</p>
+  <p>Diseñado con cariño para que cada clic sepa a galleta 🍪</p>
+</footer>
+</body>
+</html>
