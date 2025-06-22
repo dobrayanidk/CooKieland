@@ -275,13 +275,60 @@
     width: 100% !important;
   }
 }
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-button img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 
   </style>
 </head>
 <body>
 
 <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5215610995979" class="whatsapp-btn" title="Chatea con nosotros por WhatsApp">💬</a>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/525512345678?text=Hola,%20quiero%20más%20información" 
+   class="whatsapp-button" 
+   target="_blank" 
+   aria-label="Chatea por WhatsApp">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
 
 <div class="container">
 
@@ -437,7 +484,7 @@
     </a>
 
     <!-- Facebook -->
-    <a href="https://www.facebook.com/share/1ANNiKmfbf/?mibextid=wwXIfr" target="_blank" style="text-decoration: none; text-align: center; background: #3b5998; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+    <a href="https://www.facebook.com/CookieLanCaLi" target="_blank" style="text-decoration: none; text-align: center; background: #3b5998; color: white; padding: 20px; border-radius: 20px; width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
       <div style="font-size: 2rem;">📘</div>
       <div style="margin-top: 10px; font-weight: bold;">CookieLanCaLi</div>
       <div style="font-size: 0.9rem;">Facebook</div>
