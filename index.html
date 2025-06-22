@@ -145,43 +145,137 @@
       border-top: 2px solid #CFA4B3;
     }
 
-   @media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  header img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  header h1 {
+    font-size: 2.4rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  header p {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  header a {
+    padding: 12px 25px !important;
+    font-size: 1rem !important;
+  }
+
+  #catalogo > div {
+    grid-template-columns: 1fr !important; /* Forzar 1 columna */
+    gap: 15px !important;
+  }
+
+  #catalogo > div > div {
+    height: auto !important;
+  }
+
+  #catalogo img {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  section {
+    padding: 20px 15px !important;
+  }
+
+  .map-container iframe {
+    height: 250px !important;
+  }
+
+  .whatsapp-btn {
+    padding: 12px 14px !important;
+    font-size: 1.4rem !important;
+    bottom: 15px !important;
+    right: 15px !important;
+  }
+
+  /* Ajustar cajas de contacto para apilar verticalmente */
+  section[aria-label="Redes sociales y contacto"] > div {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
+  section[aria-label="Redes sociales y contacto"] a {
+    width: 90% !important;
+    max-width: 300px !important;
+    padding: 15px !important;
+    font-size: 1rem !important;
+  }
+
+  section[aria-label="Redes sociales y contacto"] img {
+    max-width: 80% !important;
+    height: auto !important;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
-  p {
+  p, button, a {
     font-size: 1rem;
   }
 
   header {
-    padding: 50px 15px 40px;
+    padding: 40px 15px 30px;
+    border-radius: 15px;
+  }
+
+  .gallery div {
+    width: 100%;
   }
 
   .gallery img {
-    height: 140px;
+    height: auto;
+    max-height: 160px;
+  }
+
+  section {
+    padding: 25px 15px;
+    margin-bottom: 35px;
+  }
+
+  .container {
+    padding: 15px 12px;
   }
 
   .whatsapp-btn {
     bottom: 15px;
     right: 15px;
-    padding: 12px 16px;
+    padding: 12px 14px;
     font-size: 1.4rem;
   }
 
-  .testimonios .card,
-  .contacto-card {
-    margin: 10px;
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
   }
 
-  .container {
-    padding: 20px 15px;
+  a[href*="instagram"],
+  a[href*="facebook"],
+  a[href*="wa.me"] {
+    width: 100% !important;
   }
 }
+
   </style>
 </head>
 <body>
